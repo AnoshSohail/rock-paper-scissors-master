@@ -5,22 +5,42 @@
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-/* 
-body{
-    background-image: radial-gradient( circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-} */
-.container{
-  padding: 30px 20px 30px 20px;
+body {
+  background-image: radial-gradient(
+    circle,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+}
+.container {
+  padding: 30px 40px 30px 40px !important;
+}
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  /* gap: 1px; */
 }
 
+.logo {
+  padding-top: 10px;
+  padding-left: 10px;
+  max-width: 40%;
+}
 .square {
-  height: 50px;
-  width: 50px;
-  background-color: #555;
- 
+  height: 60px;
+  width: 65px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: hsl(229, 64%, 46%);
+  background-color: white;
   border-radius: 5%;
 }
-.square , .score{
+.square,
+.score {
   margin: 0;
   padding: 4px;
 }
@@ -33,7 +53,6 @@ h2 {
   background-color: white;
   position: relative;
   right: 50%;
-  
 }
 .modal {
   height: 90vh;
@@ -49,25 +68,25 @@ h2 {
   /* max-height: 100%; */
   border-radius: 0;
 }
-.modal-fullscreen .modal-body{
-    overflow: hidden !important
+.modal-fullscreen .modal-body {
+  overflow: hidden !important;
 }
 .modal-body > svg {
   display: block;
   margin: auto;
 }
 
-.modal-footer{
-  padding-bottom: 50px !important
+.modal-footer {
+  padding-bottom: 50px !important;
 }
-button[type=button]{
+button[type="button"] {
   border: 1px solid white;
   text-transform: uppercase;
   color: white;
   font-weight: 600;
   letter-spacing: 0.2em;
 }
-.btn{
+.btn {
   margin-bottom: 30px !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
