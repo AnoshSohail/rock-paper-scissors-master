@@ -42,7 +42,36 @@ body {
 .square,
 .score {
   margin: 0;
-  padding: 4px;
+  padding: 2px;
+}
+#totalScore {
+  font-size: 25px;
+  color: hsl(229, 25%, 31%);
+}
+main {
+  padding-top: 30px;
+  position: relative;
+}
+.triangle {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+.paperBorder > img {
+  display: inline;
+  width: 20%;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%))
+    10;
+  border-radius: 50%;
+  padding: 18px;
+  position: absolute;
+  top: 0;
+  left: 70px;
+  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; /*5'*/
+  mask-composite: exclude; /*5*/
 }
 h2 {
   text-transform: uppercase;
@@ -71,7 +100,7 @@ h2 {
 .modal-fullscreen .modal-body {
   overflow: hidden !important;
 }
-.modal-body > svg {
+.modal-body > img {
   display: block;
   margin: auto;
 }
