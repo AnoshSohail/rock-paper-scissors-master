@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
@@ -57,21 +57,67 @@ main {
   margin: auto;
   width: 50%;
 }
-.paperBorder > img {
-  display: inline;
-  width: 20%;
-  border: 5px solid;
-  border-image: linear-gradient(45deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%))
-    10;
-  border-radius: 50%;
-  padding: 18px;
+button{
+  border: none;
+  background-color: transparent;
+}
+button > img{
+  width: 50%;
+  position: absolute;
+  left: 23%;
+  top: 18%;
+}
+
+.paper{
   position: absolute;
   top: 0;
-  left: 70px;
-  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; /*5'*/
-  mask-composite: exclude; /*5*/
+  left: 25%;
+}
+.paperBorder {
+  position: relative;
+  width: 93px;
+  height: 97px;
+  border: double 11px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.scissor{
+  position: absolute;
+  top: 0;
+  left: 55%;
+}
+.scissorBorder {
+  position: relative;
+  width: 93px;
+  height: 97px;
+  border: double 11px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+
+.rock{
+  position: absolute;
+  top: 52%;
+  left: 40%;
+}
+.rockBorder {
+  position: relative;
+  width: 93px;
+  height: 97px;
+  border: double 11px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(349, 71%, 52%)  , hsl(349, 70%, 56%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 h2 {
   text-transform: uppercase;
@@ -81,7 +127,7 @@ h2 {
   border: none;
   background-color: white;
   position: relative;
-  right: 50%;
+  right: 47%;
 }
 .modal {
   height: 90vh;
@@ -94,7 +140,6 @@ h2 {
 }
 .modal-content {
   min-height: 94vh;
-  /* max-height: 100%; */
   border-radius: 0;
 }
 .modal-fullscreen .modal-body {
