@@ -57,6 +57,10 @@ main {
   margin: auto;
   width: 50%;
 }
+.choices{
+display:flex;
+flex-wrap: wrap;
+}
 button{
   border: none;
   background-color: transparent;
