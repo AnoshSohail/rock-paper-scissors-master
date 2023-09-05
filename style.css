@@ -60,6 +60,7 @@ main {
 .choices{
 display:flex;
 flex-wrap: wrap;
+justify-content: center;
 }
 button{
   border: none;
