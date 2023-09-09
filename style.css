@@ -48,30 +48,37 @@ body {
   font-size: 25px;
   color: hsl(229, 25%, 31%);
 }
-main {
-  padding-top: 30px;
-  position: relative;
+.choices {
+  display: grid;
+  grid-template-areas:
+    "paper scissor"
+    "rock rock";
+  justify-content: center;
+  grid-row-gap: 2rem;
+  grid-column-gap: 4rem;
+  justify-items: center;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  background-image: url("/images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 226px;
+  margin-top: 50px;
 }
-.triangle {
-  display: block;
-  margin: auto;
-  width: 50%;
-}
-button{
+button {
   border: none;
   background-color: transparent;
 }
-button > img{
+button > img {
   width: 50%;
   position: absolute;
   left: 23%;
   top: 18%;
 }
 
-.paper{
-  position: absolute;
-  top: 0;
-  left: 25%;
+.paper {
+  grid-area: paper;
 }
 .paperBorder {
   position: relative;
@@ -85,10 +92,8 @@ button > img{
   background-clip: padding-box, border-box;
 }
 
-.scissor{
-  position: absolute;
-  top: 0;
-  left: 55%;
+.scissor {
+  grid-area: scissor;
 }
 .scissorBorder {
   position: relative;
@@ -97,16 +102,13 @@ button > img{
   border: double 11px transparent;
   border-radius: 80px;
   background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+    radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
 
-
-.rock{
-  position: absolute;
-  top: 52%;
-  left: 40%;
+.rock {
+  grid-area: rock;
 }
 .rockBorder {
   position: relative;
@@ -115,7 +117,7 @@ button > img{
   border: double 11px transparent;
   border-radius: 80px;
   background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, hsl(349, 71%, 52%)  , hsl(349, 70%, 56%));
+    radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
