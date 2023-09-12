@@ -16,23 +16,10 @@
     href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap"
     rel="stylesheet">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
+  <!-- header -->
   <header>
     <div class="container">
       <div class="row g-0">
@@ -49,30 +36,25 @@
     </div>
   </header>
   <main>
+    <!-- choices -->
     <div class="choices">
       <div class="paper paperBorder">
-
-        <button>
+          <button>
           <span class="visually-hidden">Paper</span>
           <img src="./images/icon-paper.svg" alt="Paper">
         </button>
-
       </div>
       <div class="scissor scissorBorder">
-
-        <button>
+      <button>
           <span class="visually-hidden">Scissors</span>
           <img src="./images/icon-scissors.svg" alt="Scissors">
         </button>
-
       </div>
       <div class="rock rockBorder">
-
-        <button>
+      <button>
           <span class="visually-hidden">Rock</span>
           <img src="./images/icon-rock.svg" alt="Rock">
         </button>
-
       </div>
     </div>
     <div class="fixed-bottom d-flex justify-content-center">
@@ -80,15 +62,14 @@
         Rules
       </button>
     </div>
-
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen-sm-down	">
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-sm-down	modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header border-0 text-center">
-            <h2 class="modal-title w-100" id="exampleModalLabel">Rules</h2>
+            <h2 class="modal-title w-100" id="exampleModalLabel">Rules</h2> -->
             <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-          </div>
+          <!-- </div>
           <div class="modal-body">
             <img src="./images/image-rules.svg" alt="">
           </div>
@@ -103,7 +84,37 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-sm-down	modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="./images/image-rules.svg" alt="">
+          </div>
+          <div class="modal-footer">
+            <button class="close" type="button" data-bs-dismiss="modal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path fill="#3B4262" fill-rule="evenodd"
+                  d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+                  opacity=".25" />
+              </svg>
+            </button>
+             </div>
+        </div>
+      </div>
     </div>
+    <!-- <div class="choosed" id="choosed">
+      <div class="paper paperBorder">
+        <img src="./images/icon-paper.svg" alt="Paper">
+      </div>
+      <div class="housePicked" id="housePicked">
+
+      </div>
+    </div> -->
     You Picked
     The House Picked
 

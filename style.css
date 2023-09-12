@@ -11,6 +11,7 @@ body {
     hsl(214, 47%, 23%),
     hsl(237, 49%, 15%)
   );
+  overflow: hidden;
 }
 .container {
   padding: 30px 40px 30px 40px !important;
@@ -48,6 +49,9 @@ body {
   font-size: 25px;
   color: hsl(229, 25%, 31%);
 }
+button {
+  display: grid !important;
+}
 .choices {
   display: grid;
   grid-template-areas:
@@ -71,7 +75,7 @@ body {
   margin: auto;
   width: 50%;
 }
-button{
+button {
   border: none;
   background-color: transparent;
 }
@@ -136,10 +140,10 @@ h2 {
   position: relative;
   right: 47%;
 }
-.modal {
+/* .modal {
   height: 90vh;
-}
-.modal-dialog {
+} */
+/* .modal-dialog {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -151,15 +155,15 @@ h2 {
 }
 .modal-fullscreen .modal-body {
   overflow: hidden !important;
-}
+} */
 .modal-body > img {
   display: block;
   margin: auto;
 }
 
-.modal-footer {
+/* .modal-footer {
   padding-bottom: 50px !important;
-}
+} */
 button[type="button"] {
   border: 1px solid white;
   text-transform: uppercase;
@@ -171,4 +175,22 @@ button[type="button"] {
   margin-bottom: 30px !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
+}
+
+.housePicked{
+   height: 90px;
+  width: 90px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.attribution {
+  position: absolute;
+ top: 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
