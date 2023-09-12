@@ -66,7 +66,12 @@ body {
   background-size: 226px;
   margin-top: 50px;
 }
-button {
+.triangle {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+button{
   border: none;
   background-color: transparent;
 }
