@@ -1,10 +1,11 @@
-* {
+*,
+::after,
+::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box !important;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
-
 body {
   background-image: radial-gradient(
     circle,
@@ -21,7 +22,7 @@ header {
 .board {
   margin-right: 0 !important;
   margin-left: 0 !important;
-  margin-top: 15px;
+  margin-top: 35px;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 5px;
   padding-right: 10px;
@@ -43,15 +44,19 @@ header {
   color: hsl(229, 64%, 46%);
   background-color: white;
   border-radius: 5%;
+  margin: 10px 0 10px 0;
+}
+p {
+  margin: 0 !important;
 }
 .square,
 .score {
-  margin: 0;
   padding: 2px;
 }
 #totalScore {
   font-size: 25px;
   color: hsl(229, 25%, 31%);
+  font-weight: 700;
 }
 button {
   display: grid !important;
@@ -70,6 +75,20 @@ button {
   background-position: center;
   background-size: 226px;
   margin-top: 50px;
+}
+.paper:hover,
+.scissor:hover,
+.rock:hover {
+  transition: 5s;
+}
+.paper:hover {
+  box-shadow: 0 0 30px 11px #7877b9;
+}
+.scissor:hover {
+  box-shadow: 0 0 30px 11px #aec06c;
+}
+.rock:hover {
+  box-shadow: 0 0 30px 11px #c48365;
 }
 .triangle {
   display: block;
@@ -94,16 +113,18 @@ button > img {
 .scissorBorder,
 .rockBorder {
   position: relative;
-  width: 97px;
-  height: 100px;
+  width: 120px;
+  height: 125px;
   border: double 11px transparent;
   border-radius: 80px;
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  cursor: pointer;
 }
 .paperBorder {
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  box-shadow: inset 0px 2px 5px 0px #888888, 0 4px 2px hsl(230, 89%, 45%);
 }
 
 .scissor {
@@ -112,6 +133,7 @@ button > img {
 .scissorBorder {
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: inset 0px 2px 5px 0px #888888, 0 4px 2px hsl(40, 84%, 35%);
 }
 
 .rock {
@@ -120,6 +142,7 @@ button > img {
 .rockBorder {
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: inset 0px 2px 2px 0px #9b9a9a, 0 4px 2px hsl(349, 70%, 42%);
 }
 h2 {
   text-transform: uppercase;
@@ -135,19 +158,25 @@ h2 {
   display: block;
   margin: auto;
 }
-button[type="button"] {
+.rulesBtn {
+  margin-right: 10px;
+}
+.rulesBtn > .btn {
   border: 1px solid white;
   text-transform: uppercase;
   color: white;
   font-weight: 600;
   letter-spacing: 0.2em;
-}
-.btn {
   margin-bottom: 30px !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
+  padding: 5px 30px 5px 30px !important;
 }
-
+.rulesBtn > .btn:hover {
+  background-color: beige;
+  transition: 1s;
+}
+.rulesBtn > .btn:active {
+  background-color: beige !important;
+}
 .housePicked {
   height: 90px;
   width: 90px;
