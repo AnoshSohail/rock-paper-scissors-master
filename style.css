@@ -13,28 +13,32 @@ body {
   );
   overflow: hidden;
 }
-.container {
-  padding: 30px 40px 30px 40px !important;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.row {
+.board {
   margin-right: 0 !important;
   margin-left: 0 !important;
+  margin-top: 15px;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 5px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  /* gap: 1px; */
+  padding-right: 10px;
+  align-items: center;
+  min-width: 360px;
 }
 
-.logo {
+.logo > img {
   padding-top: 10px;
   padding-left: 10px;
-  max-width: 40%;
+  width: 30%;
 }
+
 .square {
-  height: 60px;
-  width: 65px;
   font-size: 12px;
+  width: 18%;
+  height: 62px;
   text-transform: uppercase;
   color: hsl(229, 64%, 46%);
   background-color: white;
@@ -61,9 +65,6 @@ button {
   grid-row-gap: 2rem;
   grid-column-gap: 4rem;
   justify-items: center;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   background-image: url("/images/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -89,46 +90,36 @@ button > img {
 .paper {
   grid-area: paper;
 }
-.paperBorder {
+.paperBorder,
+.scissorBorder,
+.rockBorder {
   position: relative;
-  width: 93px;
-  height: 97px;
+  width: 97px;
+  height: 100px;
   border: double 11px transparent;
   border-radius: 80px;
-  background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+.paperBorder {
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 }
 
 .scissor {
   grid-area: scissor;
 }
 .scissorBorder {
-  position: relative;
-  width: 93px;
-  height: 97px;
-  border: double 11px transparent;
-  border-radius: 80px;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
 }
 
 .rock {
   grid-area: rock;
 }
 .rockBorder {
-  position: relative;
-  width: 93px;
-  height: 97px;
-  border: double 11px transparent;
-  border-radius: 80px;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
 }
 h2 {
   text-transform: uppercase;
@@ -140,30 +131,10 @@ h2 {
   position: relative;
   right: 47%;
 }
-/* .modal {
-  height: 90vh;
-} */
-/* .modal-dialog {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-.modal-content {
-  min-height: 94vh;
-  border-radius: 0;
-}
-.modal-fullscreen .modal-body {
-  overflow: hidden !important;
-} */
 .modal-body > img {
   display: block;
   margin: auto;
 }
-
-/* .modal-footer {
-  padding-bottom: 50px !important;
-} */
 button[type="button"] {
   border: 1px solid white;
   text-transform: uppercase;
@@ -177,16 +148,17 @@ button[type="button"] {
   padding-right: 30px !important;
 }
 
-.housePicked{
-   height: 90px;
+.housePicked {
+  height: 90px;
   width: 90px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
 }
+
 .attribution {
   position: absolute;
- top: 0;
+  top: 0;
   font-size: 11px;
   text-align: center;
 }
